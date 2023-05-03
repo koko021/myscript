@@ -1,0 +1,555 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Launcher", "Synapse")
+
+--MAIN
+    local Main = Window:NewTab("Koko's Scripts")
+    local LC = Window:NewTab("Legit Client")
+    local Help = Window:NewTab("Help")
+    local Mai44nSection = Help:NewSection("Press on Attach")
+    local MainSection = Main:NewSection("Execute")
+    local M3inSection = Help:NewSection("after pressing on attach")
+    local M13inSection = Help:NewSection("press execute")
+    local M13i3nSection = Help:NewSection("and then close this")
+    local LCSection = LC:NewSection("LC Client")
+    
+    Mai44nSection:NewButton("Attach", "Do this or your game may bug", function()
+        game.StarterGui:SetCore("SendNotification", { Title = "Attached"; Text = "Thank you for using my script! You can now execute it!" })
+    end)
+    
+    LCSection:NewButton("Execute LC Client", "Legit CLient", function()
+        local Library =loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("LC Client", "Ocean")
+
+    local LC = Window:NewTab("Legit Client")
+    local LCxCR = Window:NewTab("Infos")
+    local LCSection = LC:NewSection("LC Client")
+    local LCxCRection = LCxCR:NewSection("Infos")
+    
+    
+        LCSection:NewButton("Fullbright", "fullbright", function()
+        local Light = game:GetService("Lighting")
+ 
+function dofullbright()
+Light.Ambient = Color3.new(1, 1, 1)
+Light.ColorShift_Bottom = Color3.new(1, 1, 1)
+Light.ColorShift_Top = Color3.new(1, 1, 1)
+end
+ 
+dofullbright()
+ 
+Light.LightingChanged:Connect(dofullbright)
+    end)
+    
+    LCSection:NewKeybind("Set Bind", "Set your bind!", Enum.KeyCode.RightControl, function()
+	Library:ToggleUI()
+end)
+    end)
+    
+    MainSection:NewButton("Execute Koko's Scripts", "Execute the script", function()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Koko's Scripts | Koko#5374", "BloodTheme")
+
+--MAIN
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+
+--PLAYER   
+ --LOCAL PLAYER
+    local Player = Window:NewTab("Player")
+    local PlayerSection = Player:NewSection("Player")
+
+    PlayerSection:NewSlider("Walkspeed", "SPEED!!", 500, 16, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+
+   PlayerSection:NewSlider("Jumppower", "JUMP HIGH!!", 350, 50, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end)
+    
+
+
+    PlayerSection:NewButton("Reset WS/JP", "Resets to all defaults", function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end)
+    
+    PlayerSection:NewButton("Emotes", "Every emote", function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Gi7331/scripts/main/Emote.lua"))()
+    end)
+
+    --Other
+    local Other = Window:NewTab("Other")
+    local OtherSection = Other:NewSection("Other")
+    
+    OtherSection:NewToggle("Trade Scam (Universal)", "Universal Trade Scam (only works if there is a trading system!", function(state)
+    if state then
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
+end)
+
+    OtherSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+    end)
+    
+    OtherSection:NewButton("TP GUI", "Can Teleport", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/bebedi15/MyWeirdScript/main/TeleportGui.lua"))()
+    end)
+    
+    MainSection:NewButton("Unfair hub", "Unfair hub (universal)", function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua'),true))()
+    end)
+
+    
+    MainSection:NewButton("Infinite Yield", "FE Admin Commands", function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+    end)
+    
+
+    MainSection:NewButton("Simple spy", "op", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/main/SimpleSpySource.lua"))()
+    end)
+    
+        MainSection:NewButton("Dark Dex", "Very op!", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+    end)
+    
+   --DOORS 
+   
+    local Doors = Window:NewTab("Doors")
+    local DoorsSection = Doors:NewSection("Doors")
+    local ItemsSection = Doors:NewSection("Doors Items")
+    
+        DoorsSection:NewButton("King Hub", "Doors Exploit!", function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/R8QMbhzv')))()
+    end)
+    
+        DoorsSection:NewButton("Auto Switch Display Achievement", "Doors Exploit!", function()
+        local list = require(game:GetService("ReplicatedStorage").Achievements)
+while task.wait() do
+    for i,v in pairs(list) do 
+        game:GetService("ReplicatedStorage").EntityInfo.FlexAchievement:FireServer(i)
+    end
+end
+    end)
+    
+        ItemsSection:NewButton("Gummy Flashlight", "Doors Exploit! (Execute on door 0!)", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Gummy%20Flashlight%20Script"))()
+    end)
+    
+        ItemsSection:NewButton("Maxwell Plushie", "Doors Exploit!", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Maxwell%20Plushie"))()
+    end)
+    
+        ItemsSection:NewButton("Scanner/Tablet", "Doors Exploit!", function()
+        _G.UpdateStars = false -- stars disappear after picking up a book/breaker pole | false: a little lag
+_G.OnShop = true -- can buy on pre run shop
+_G.Price = 1000 -- tablet price on shop
+_G.Description = "" -- tablet description on shop
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/DeividComSono/Scripts/main/Scanner.lua'))()
+    end)
+    
+       ItemsSection:NewButton("Laser Gun", "Doors Exploit!", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Laser%20Gun"))()
+    end)
+
+    
+        DoorsSection:NewButton("Auto A-1000", "Auto-A1000 (Just press once) Only works in rooms!", function()
+        if game.PlaceId ~= 6839171747 or game.ReplicatedStorage.GameData.Floor.Value ~= "Rooms" then
+	game.StarterGui:SetCore("SendNotification", { Title = "Invalid Place"; Text = "The game detected appears to not be rooms. Please execute this while in rooms!" })
+	
+	local Sound = Instance.new("Sound")
+	Sound.Parent = game.SoundService
+	Sound.SoundId = "rbxassetid://550209561"
+	Sound.Volume = 5
+	Sound.PlayOnRemove = true
+	Sound:Destroy()
+	
+	return
+elseif workspace:FindFirstChild("PathFindPartsFolder") then
+	return
+end
+
+local PathfindingService = game:GetService("PathfindingService")
+local VirtualInputManager = game:GetService('VirtualInputManager')
+local LocalPlayer = game.Players.LocalPlayer
+local LatestRoom = game.ReplicatedStorage.GameData.LatestRoom
+
+local Cooldown = false
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = game.CoreGui
+
+local TextLabel = Instance.new("TextLabel")
+TextLabel.Parent = ScreenGui
+
+TextLabel.Size = UDim2.new(0,350,0,100)
+TextLabel.TextSize = 48
+TextLabel.TextStrokeColor3 = Color3.new(1,1,1)
+TextLabel.TextStrokeTransparency = 0
+TextLabel.BackgroundTransparency = 1
+
+local GC = getconnections or get_signal_cons
+if GC then
+    for i,v in pairs(GC(LocalPlayer.Idled)) do
+        if v["Disable"] then
+            v["Disable"](v)
+        elseif v["Disconnect"] then
+            v["Disconnect"](v)
+        end
+    end
+end
+
+local Folder = Instance.new("Folder")
+Folder.Parent = workspace
+Folder.Name = "PathFindPartsFolder"
+
+if LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules:FindFirstChild("A90") then
+    LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.A90.Name = "lol" -- Fuck you A90
+end
+
+function getLocker()
+    local Closest
+
+    for i,v in pairs(workspace.CurrentRooms:GetDescendants()) do
+        if v.Name == "Rooms_Locker" then
+            if v:FindFirstChild("Door") and v:FindFirstChild("HiddenPlayer") then
+                if v.HiddenPlayer.Value == nil then
+                    if v.Door.Position.Y > -3 then -- Prevents going to the lower lockers in the room with the bridge 
+                        if Closest == nil then
+                            Closest = v.Door
+                        else
+                            if (LocalPlayer.Character.HumanoidRootPart.Position - v.Door.Position).Magnitude < (Closest.Position - LocalPlayer.Character.HumanoidRootPart.Position).Magnitude then
+                                Closest = v.Door
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+    return Closest
+end
+
+function getPath()
+    local Part
+	
+    local Entity = workspace:FindFirstChild("A60") or workspace:FindFirstChild("A120")
+    if Entity and Entity.Main.Position.Y > -4 then
+        Part = getLocker()
+    else
+        Part = workspace.CurrentRooms[LatestRoom.Value].Door.Door
+    end
+    return Part
+end
+
+LatestRoom:GetPropertyChangedSignal("Value"):Connect(function()
+    TextLabel.Text = "Room: "..math.clamp(LatestRoom.Value, 1,1000)
+
+    if LatestRoom.Value ~= 1000 then
+        LocalPlayer.DevComputerMovementMode = Enum.DevComputerMovementMode.Scriptable
+    else
+        LocalPlayer.DevComputerMovementMode = Enum.DevComputerMovementMode.KeyboardMouse
+	
+        Folder:ClearAllChildren()
+    
+        local Sound = Instance.new("Sound")
+        Sound.Parent = game.SoundService
+        Sound.SoundId = "rbxassetid://4590662766"
+        Sound.Volume = 3
+        Sound.PlayOnRemove = true
+        Sound:Destroy()
+        
+        game.StarterGui:SetCore("SendNotification", { Title = "youtube.com/geoduude"; Text = "Thank you for using my script!" })
+        return
+    end
+end)
+
+game:GetService("RunService").RenderStepped:connect(function()
+    LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+    LocalPlayer.Character.Collision.CanCollide = false
+    LocalPlayer.Character.Collision.CustomPhysicalProperties = PhysicalProperties.new(9e9,9e9,9e9)
+
+    LocalPlayer.Character.Humanoid.WalkSpeed = 21
+
+    local Path = getPath()
+    
+    local Entity = workspace:FindFirstChild("A60") or workspace:FindFirstChild("A120")
+    if Entity then
+        if Path then
+            if Path.Parent.Name == "Rooms_Locker" then
+                if Entity.Main.Position.Y > -4 then
+                    if (LocalPlayer.Character.HumanoidRootPart.Position - Path.Position).Magnitude < 5 then
+                        if LocalPlayer.Character.HumanoidRootPart.Anchored == false then
+                            fireproximityprompt(Path.Parent.HidePrompt)
+                        end
+                    end
+                end
+            end
+        end
+        if Entity.Main.Position.Y < -4 then
+            if LocalPlayer.Character.HumanoidRootPart.Anchored == true then
+                game.ReplicatedStorage.EntityInfo.CamLock:FireServer()
+            end
+        end
+    else
+        if LocalPlayer.Character.HumanoidRootPart.Anchored == true then
+            game.ReplicatedStorage.EntityInfo.CamLock:FireServer()
+        end
+    end
+end)
+
+while true do
+
+    local Destination = getPath()
+
+    local path = PathfindingService:CreatePath({ WaypointSpacing = 1, AgentRadius = 0.4, AgentCanJump = false })
+    path:ComputeAsync(LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new(0,2.5,0), Destination.Position)
+    local Waypoints = path:GetWaypoints()
+
+    if path.Status ~= Enum.PathStatus.NoPath then
+
+        Folder:ClearAllChildren()
+
+        for _, Waypoint in pairs(Waypoints) do
+            local part = Instance.new("Part")
+            part.Size = Vector3.new(1,1,1)
+            part.Position = Waypoint.Position
+            part.Shape = "Cylinder"
+            part.Rotation = Vector3.new(0,0,90)
+            part.Material = "SmoothPlastic"
+            part.Anchored = true
+            part.CanCollide = false
+            part.Parent = Folder
+        end
+
+        for _, Waypoint in pairs(Waypoints) do
+            if LocalPlayer.Character.HumanoidRootPart.Anchored == false then
+                LocalPlayer.Character.Humanoid:MoveTo(Waypoint.Position)
+                LocalPlayer.Character.Humanoid.MoveToFinished:Wait()
+            end
+        end
+    end
+end
+    end)
+    
+        DoorsSection:NewButton("Vynixius ", "Doors Exploit!", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+    end)
+
+--AUTO FARMS
+
+    local AutoFarms = Window:NewTab("Auto Farms")
+    local UniAutoFarmsSection = AutoFarms:NewSection("Universal")
+    local AutoFarmsSection = AutoFarms:NewSection("Speed Run Simulator ⚡")
+    local mm2AutoFarmsSection = AutoFarms:NewSection("Murder Mystery 2")
+    local punchwallsimAutoFarmsSection = AutoFarms:NewSection("Punch Wall Simulator")
+
+    local Client = Window:NewTab("Client")
+    local ClientSection = Client:NewSection("Client")
+    
+        AutoFarmsSection:NewButton("Auto Farm Orbs", "Auto Farming orbs", function()
+        while wait(0.1) do
+local orbs = game:GetService("Workspace").GameAssets.GlobalAssets.OrbSpawns
+for i, v in pairs(orbs:GetChildren()) do
+if v:IsA("MeshPart") then
+local user = game.Players.LocalPlayer.Character.Head
+firetouchinterest(user, v, 0)
+elseif v:IsA("Model") then
+local summerOrb = v["Orb.1"]
+firetouchinterest(game.Players.LocalPlayer.Character.Head, summerOrb, 0)
+end
+end
+end
+    end)
+    
+    
+        AutoFarmsSection:NewButton("Add Heart Dominus", "adds pets", function()
+        game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer("Heart Dominus", false)
+    end) 
+    
+        punchwallsimAutoFarmsSection:NewButton("OP Auto Farm", "OP Fast Training and more", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/BeboScripts/main/PunchWallSim.lua"))()
+    end) 
+    
+    
+    mm2AutoFarmsSection:NewToggle("Auto Farm Coin", "Auto Farms Coins!", function(state)
+    if state then
+
+--	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+
+-- Get the necessary game services
+
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
+local PathfindingService = game:GetService("PathfindingService")
+
+-- Function to get the position of the nearest coin
+local function getNearestCoin()
+    local nearestCoin = nil
+    local nearestDistance = math.huge
+    for _, coin in ipairs(Workspace:GetDescendants()) do
+        if coin.Name == "Coin_Server" then
+            local distance = (coin.Position - Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude
+            if distance < nearestDistance then
+                nearestCoin = coin
+                nearestDistance = distance
+            end
+        end
+    end
+    return nearestCoin
+end
+
+-- Function to move the AI towards the target location using PathfindingService
+local function moveToTarget(character, target)
+    local path = PathfindingService:CreatePath()
+    path:ComputeAsync(character.HumanoidRootPart.Position, target)
+    local waypoints = path:GetWaypoints()
+    for _, waypoint in ipairs(waypoints) do
+        character.Humanoid:MoveTo(waypoint.Position)
+        character.Humanoid.MoveToFinished:Wait()
+    end
+end
+
+-- Function to make the AI move towards the nearest coin and pick it up
+local function moveToCoin(character)
+    while true do
+        local nearestCoin = getNearestCoin()
+        if nearestCoin then
+            local distance = (nearestCoin.Position - character.HumanoidRootPart.Position).magnitude
+            if distance <= 2 then -- Pick up the coin if the AI is close enough
+                nearestCoin.Parent = nil
+            else
+                moveToTarget(character, nearestCoin.Position)
+            end
+        else
+            break -- No more coins left to pick up
+        end
+    end
+end
+
+
+-- Function to make the AI move randomly within a certain distance
+local function randomMove(character, distance)
+    while true do
+        local randomPosition = Vector3.new(
+            character.HumanoidRootPart.Position.X + math.random(-distance, distance),
+            character.HumanoidRootPart.Position.Y,
+            character.HumanoidRootPart.Position.Z + math.random(-distance, distance)
+        )
+        moveToTarget(character, randomPosition)
+    end
+end
+
+-- Function to check if the AI is stuck and jump if necessary
+local function jumpIfStuck(character)
+    local stuckTime = 0
+    local lastVelocity = Vector3.new()
+    while true do
+        if character.HumanoidRootPart.Velocity.magnitude < 1 then
+            stuckTime = stuckTime + 1
+        else
+            stuckTime = 0
+        end
+        if stuckTime > 0.1 then -- If the AI is stuck for more than 5 seconds, jump
+            character.Humanoid.Jump = true
+            stuckTime = 0
+        end
+        lastVelocity = character.HumanoidRootPart.Velocity
+        wait(1)
+    end
+end
+
+
+-- Function to make the AI aware of its surroundings
+local function checkSurroundings(character)
+    local frontRay = Ray.new(character.HumanoidRootPart.Position, character.HumanoidRootPart.CFrame.lookVector * 10)
+    local backRay = Ray.new(character.HumanoidRootPart.Position, character.HumanoidRootPart.CFrame.lookVector * -10)
+    local leftRay = Ray.new(character.HumanoidRootPart.Position, character.HumanoidRootPart.CFrame.rightVector * -10)
+    local rightRay = Ray.new(character.HumanoidRootPart.Position, character.HumanoidRootPart.CFrame.rightVector * 10)
+    
+    local frontHitPart, frontHitPosition = Workspace:FindPartOnRay(frontRay)
+    local backHitPart, backHitPosition = Workspace:FindPartOnRay(backRay)
+    local leftHitPart, leftHitPosition = Workspace:FindPartOnRay(leftRay)
+    local rightHitPart, rightHitPosition = Workspace:FindPartOnRay(rightRay)
+    
+    -- If there's an obstacle in front, move to the side
+    if frontHitPart and frontHitPart.CanCollide then
+        if leftHitPart and not leftHitPart.CanCollide then
+            moveToTarget(character, leftHitPosition)
+        elseif rightHitPart and not rightHitPart.CanCollide then
+            moveToTarget(character, rightHitPosition)
+        end
+    end
+    
+    -- If there's an obstacle behind, turn around
+    if backHitPart and backHitPart.CanCollide then
+        character.HumanoidRootPart.CFrame = CFrame.new(
+            character.HumanoidRootPart.Position,
+            character.HumanoidRootPart.Position - character.HumanoidRootPart.CFrame.lookVector
+        )
+    end
+end
+
+function check_for_knives(player)
+    for _, item in pairs(player.Backpack:GetChildren()) do
+        if item.Name == "Knife" then
+            return true
+        end
+    end
+    return false
+end
+
+
+-- Function to start the AI movement loop
+local function startAI(character)
+    while true do
+        moveToCoin(character) -- Move towards the nearest coin and pick it up
+        randomMove(character, 20) -- Move randomly within 20 studs of the current position
+        jumpIfStuck(character) -- Check if the AI is stuck and jump if necessary
+    end
+end
+
+-- Find the local player's character and start the AI movement loop
+local character = Players.LocalPlayer.Character or Players.LocalPlayer.CharacterAdded:Wait()
+startAI(character)
+
+    else
+	game.StarterGui:SetCore("SendNotification", { Title = "Hey!"; Text = "Press W to stop auto farming!" })
+	
+	local Sound = Instance.new("Sound")
+	Sound.Parent = game.SoundService
+	Sound.SoundId = "rbxassetid://550209561"
+	Sound.Volume = 5
+	Sound.PlayOnRemove = true
+	Sound:Destroy()
+    end
+end)
+
+
+ClientSection:NewKeybind("Set Bind", "Set your bind!", Enum.KeyCode.RightControl, function()
+	Library:ToggleUI()
+end)
+
+        ClientSection:NewButton("Fullbright", "fullbright", function()
+        local Light = game:GetService("Lighting")
+ 
+function dofullbright()
+Light.Ambient = Color3.new(1, 1, 1)
+Light.ColorShift_Bottom = Color3.new(1, 1, 1)
+Light.ColorShift_Top = Color3.new(1, 1, 1)
+end
+ 
+dofullbright()
+ 
+Light.LightingChanged:Connect(dofullbright)
+    end)
+
+
+
+
+    end)
+    
+    
